@@ -9,7 +9,7 @@ function getPath($type = "absolute")
 }
 function head($skin = "default", $type = null)
 {
-    global $_head;
+    global $_head, $_tail;
     if ($type == null) {
         if ($_SERVER["SCRIPT_NAME"] == getPath("relative") . "/install.php")
             $type = "install";
@@ -22,7 +22,7 @@ function head($skin = "default", $type = null)
 }
 function tail($skin = "default", $type = null)
 {
-    global $_tail;
+    global $_head, $_tail;
     if ($type == null) {
         $type = getPageType();
     }
